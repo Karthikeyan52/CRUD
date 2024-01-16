@@ -1,0 +1,84 @@
+# note:
+# all command in terminal
+# pip install django
+# django-admin
+# django-admin startproject website .
+# python manage.py runserver 80
+# pip install mysqlclient
+# python manage.py makemigrations website
+# python manage.py migrate
+# python manage.py migrate website
+# python manage.py startapp CRUD
+
+
+# create temp dir
+# settings -> template -> dir ['input the folder name example - website/templates']
+
+# MVT frameworks
+
+# Models - Data(database)
+# views - urls
+# templates - html pages
+
+# HTML/CSS/JS
+
+# IPv4 - 192.168.0.1 (decimal)
+# IPv6 - (hexidecimal)(0-9, a-f)
+
+# IP address - 127.0.0.1
+# port - 8000 (logical gate) (TP - 65535 , UDP - 65535)
+
+# port - 80 - HTTP
+# Port - 443 - HTTPS
+
+# request ---> google.com
+# response <---- google.com
+
+# GUI - graphical user interface
+# CLI - command line interface
+# CRUD - Create Read Update Delete
+
+# process
+# s1 -> write function in view.py
+# s2 -> create new dir for html files
+# s3 -> create a html file and write the content
+# s4 -> open urls.py and create a path
+# s5 -> create new html file for org
+# s6 -> loop the steps
+
+# {% funtion %}
+# {{variable}}
+
+# Mysql
+# int - int
+# varchar - string
+
+# Adding Mysql in python and creating file in Mysql
+# s_1 -> creating a class in model.py
+# s_2 -> need to connect database
+# s_3 -> Go to setting.py add
+        DATABASES = {
+                     'default': {
+                     'ENGINE': 'django.db.backends.mysql',
+                     'NAME': 'File name',
+                     'USER': 'root',
+                     'PASSWORD': 'karthiee25',
+                     'HOST': 'localhost',
+                     'PORT': 3306
+                      }
+                    }
+# s_4 -> Then go to terminal install mysqlclient by using this command --> pip install mysqlclient
+# s_5 -> after installation do run this command --> python manage.py makemigrations "File name"
+# s_6 -> after doing migrations do run this command --> python manage.py migrate (or) python manage.py migrate "File name"
+# s_7 -> check Mysql workbench table.
+# s_8 -> whenever creating new class must need to do makemigrations and migrate
+        makemigrations is for creating ah table in sql.
+        migrate is for saving the table in sql.
+
+
+# types of error:
+# 1xx - informational messages
+# 2xx - OK, 201 - Created
+# 3xx - Redirection
+# 4xx - Client-side error
+# 5xx - Server-side error

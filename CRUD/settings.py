@@ -54,7 +54,10 @@ ROOT_URLCONF = 'CRUD.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["CRUD/Temp",
+                 "Create/Temp",
+                 "Read/Temp",
+                 "Update/Temp"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,8 +78,12 @@ WSGI_APPLICATION = 'CRUD.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'crud',
+        'USER': 'root',
+        'PASSWORD': 'karthiee25',
+        'HOST': 'localhost',
+        'PORT': 3306
     }
 }
 

@@ -55,7 +55,7 @@
 
 # Adding Mysql in python and creating file in Mysql
 # s_1 -> creating a class in model.py
-# s_2 -> need to connect database
+# s_2 -> go to MySQL workbench and create a new schema
 # s_3 -> Go to setting.py add
         DATABASES = {
                      'default': {

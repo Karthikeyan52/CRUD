@@ -5,6 +5,20 @@
     <title>Create</title>
 </head>
 <body>
+<form method="POST" action="">
+    {% csrf_token %}
+    <pre>
+Name:    <input type="text" name="name" value="" width="200"> <br><br>
+email:   <input type="text" name="email" value="" width="200"> <br><br>
+contact: <input type="text" name="contact" value="" width="200"> <br><br>
+         <input type="submit" value="Submit">
+    </pre>
+    <h1>{% for i in data %}<br>
+    {{i.name}}
+    {% endfor %}
+    </h1>
+</form>
+
 
 </body>
 </html>

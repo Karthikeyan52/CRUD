@@ -14,7 +14,9 @@ contact: <input type="text" name="contact" value="" width="200"> <br><br>
          <input type="submit" value="Submit">
     </pre>
     <h1>{% for i in data %}<br>
-    {{i.name}}
+    {{i.name}}<br>
+    {{i.email}}<br>
+    {{i.contact}}<hr>
     {% endfor %}
     </h1>
 </form>

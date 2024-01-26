@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<form action="/update/{{ data.pk }}" method="POST">
+    {% csrf_token %}
+    ID: <input type="text" value="{{ data.id }}" name="id"> <br>
+    Name: <input type="text" value="{{ data.name }}" name="name"> <br>
+    Email: <input type="text" value="{{ data.email }}" name="email"> <br>
+    Contact: <input type="text" value="{{ data.contact }}" name="contact"> <br>
+    <input type="submit" value="Update">
+</form>
+</body>
+</html>

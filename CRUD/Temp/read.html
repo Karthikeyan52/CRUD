@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Read</title>
+</head>
+<body style="text-align:center;">
+{% for i in data%}
+Name: {{i.name}}<br>
+Email: {{i.email}}<br>
+Contact: {{i.contact}}<br>
+<a href="/update/{{ i.pk }}">Update</a> ||
+<a href="/delete/{{ i.pk }}">Delete</a><hr>
+{%endfor%}
+
+</body>
+</html>

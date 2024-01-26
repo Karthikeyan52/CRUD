@@ -20,3 +20,28 @@ def create(request):
         return redirect('home')
     else:
         return render(request, "create.html", logic)
+
+
+def read(request):
+    data = model.Create.objects.all()
+    context = {'data': data}
+    return render(request, "read.html", context)
+
+
+def update(request, pk):
+    data = model.Create.objects.get(pk=pk)
+    context = {'data': data}
+    if request.method == "POST":
+        data.name = request.POST.get("name")
+        data.email = request.POST.get("email")
+        data.contact = request.POST.get("contact")
+        data.save()
+        return redirect('read')
+    return render(request, "update.html", context)
+
+
+def delete(request, pk):
+    data = model.Create.objects.filter(pk=pk).first()
+    data.delete()
+    return redirect('read')
+
